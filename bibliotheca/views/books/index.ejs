@@ -1,0 +1,14 @@
+<h2>Search Books</h2>
+<form action='/books' method="GET">
+  <label>Title</label>
+  <input type='text' name='title' value='<%= searchOptions.title %> '/>
+  <label>Published Date</label>
+  <input type='date' name='publish After' value='<%= searchOptions.PublishedDate %> '>
+  <label>Published Date</label>
+  <input type='date' name='publish Before' value='<%= searchOptions.PublishedDate %> '>
+  <button type='submit'>Search</button>
+</form>
+<br />
+<% authors.forEach(author =>{ %>
+<div><%= author.name %></div>
+<% }) %>
